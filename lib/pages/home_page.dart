@@ -14,7 +14,7 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  var buttonStyleInactive = ElevatedButton.styleFrom(
+  ButtonStyle buttonStyleInactive = ElevatedButton.styleFrom(
       elevation: 0,
       backgroundColor: WeinFluColors.brandSecondaryColor,
       shadowColor: WeinFluColors.brandLigthDarkColor,
@@ -22,7 +22,7 @@ class _HomePageState extends State<HomePage> {
         borderRadius: BorderRadius.circular(12), // <-- Radius
       ));
 
-  var buttonStyleActive = ElevatedButton.styleFrom(
+  ButtonStyle buttonStyleActive = ElevatedButton.styleFrom(
       backgroundColor: WeinFluColors.brandMidGreyColor,
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(12), // <-- Radius

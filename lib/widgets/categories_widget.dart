@@ -1,5 +1,6 @@
 import "package:flutter/material.dart";
 import "package:flutter_002/design/colors.dart";
+
 import "package:flutter_002/widgets/custom_money_display.dart";
 
 class CategoriesWidget extends StatelessWidget {
@@ -18,7 +19,7 @@ class CategoriesWidget extends StatelessWidget {
                 color: Color.fromRGBO(53, 97, 254, 1)),
           ),
           onPressed: () {
-            print('presionaste click');
+            Navigator.of(context).pushNamed('new-page');
           },
         ),
         const ProductDetailCard(
