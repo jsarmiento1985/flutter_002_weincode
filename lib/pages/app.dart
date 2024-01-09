@@ -3,6 +3,7 @@ import "package:flutter_002/config/app_routes.dart";
 import "package:flutter_002/design/themes.dart";
 import "package:flutter_002/models/user.dart";
 import "package:flutter_002/pages/home_page.dart";
+import "package:flutter_002/pages/login_page.dart";
 import "package:flutter_002/pages/new_pages.dart";
 import "package:flutter_002/pages/other_page.dart";
 
@@ -28,10 +29,16 @@ class WeinFluApp extends StatelessWidget {
         switch (settings.name) {
           case AppRoutes.newPage:
             return MaterialPageRoute(builder: (context) => const NewPage());
+          case AppRoutes.home:
+            return MaterialPageRoute(
+                builder: (context) =>
+                    HomePage(storeName: settings.arguments as String));
           case AppRoutes.otherPage:
-            return MaterialPageRoute(builder: (context) =>  OtherPage(userData: settings.arguments as User));
+            return MaterialPageRoute(
+                builder: (context) =>
+                    OtherPage(userData: settings.arguments as User));
           default:
-            return MaterialPageRoute(builder: (context) => const HomePage());
+            return MaterialPageRoute(builder: (context) => const LoginPage());
         }
       },
     );

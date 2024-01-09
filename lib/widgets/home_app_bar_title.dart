@@ -1,8 +1,14 @@
 import "package:flutter/material.dart";
+
 import "package:flutter_002/design/colors.dart";
 
 class HomeAppBarTitle extends StatelessWidget {
-  const HomeAppBarTitle({super.key});
+  final String storeName;
+
+  const HomeAppBarTitle({
+    Key? key,
+    required this.storeName,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -19,7 +25,7 @@ class HomeAppBarTitle extends StatelessWidget {
         ),
         Expanded(
           child: Text(
-            'Store Name',
+            storeName,
             style: Theme.of(context).textTheme.headlineLarge,
           ),
         ),

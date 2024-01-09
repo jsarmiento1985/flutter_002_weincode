@@ -1,4 +1,5 @@
 import "package:flutter/material.dart";
+
 import "package:flutter_002/design/colors.dart";
 import "package:flutter_002/design/radius.dart";
 import "package:flutter_002/widgets/categories_widget.dart";
@@ -7,7 +8,12 @@ import "package:flutter_002/widgets/mid_home_page_body.dart";
 import "package:flutter_002/widgets/top_home_page_body.dart";
 
 class HomePage extends StatefulWidget {
-  const HomePage({super.key});
+  final String storeName;
+
+  const HomePage({
+    Key? key,
+    required this.storeName,
+  }) : super(key: key);
 
   @override
   State<HomePage> createState() => _HomePageState();
@@ -49,9 +55,9 @@ class _HomePageState extends State<HomePage> {
                   bottomLeft: WeinFluRadius.radiusSmall,
                   bottomRight: WeinFluRadius.radiusXs)),
           backgroundColor: WeinFluColors.brandLightColor,
-          title: const Padding(
-            padding: EdgeInsets.fromLTRB(16, 45, 16, 12),
-            child: HomeAppBarTitle(),
+          title: Padding(
+            padding: const EdgeInsets.fromLTRB(16, 45, 16, 12),
+            child: HomeAppBarTitle(storeName: widget.storeName),
           )),
       body: Column(
         children: [
