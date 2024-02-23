@@ -2,6 +2,7 @@ import "package:flutter/material.dart";
 import "package:flutter_002/config/app_routes.dart";
 import "package:flutter_002/design/themes.dart";
 import "package:flutter_002/models/user.dart";
+import "package:flutter_002/pages/all_transactions.dart";
 import "package:flutter_002/pages/home_page.dart";
 import "package:flutter_002/pages/login_page.dart";
 import "package:flutter_002/pages/new_pages.dart";
@@ -37,6 +38,10 @@ class WeinFluApp extends StatelessWidget {
             return MaterialPageRoute(
                 builder: (context) =>
                     OtherPage(userData: settings.arguments as User));
+          case AppRoutes.allTransactions:
+            return MaterialPageRoute(
+                builder: (context) => const AllTransactions());
+
           default:
             return MaterialPageRoute(builder: (context) => const LoginPage());
         }

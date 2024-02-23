@@ -15,11 +15,12 @@ class CategoriesWidget extends StatelessWidget {
           child: const Text(
             "View All",
             style: TextStyle(
+                fontSize: 17.0,
                 fontWeight: FontWeight.bold,
                 color: Color.fromRGBO(53, 97, 254, 1)),
           ),
           onPressed: () {
-            Navigator.of(context).pushNamed('new-page');
+            Navigator.of(context).pushNamed('all-transactions');
           },
         ),
         const ProductDetailCard(
